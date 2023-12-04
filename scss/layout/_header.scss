@@ -1,0 +1,7 @@
+@use "../layout/container";
+@use "../utils/variables" as var;
+
+#navigator {
+    background-color: var.$qizil-color;
+    height: 100px;
+}

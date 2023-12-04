@@ -1,0 +1,487 @@
+@use "../utils/variables" as var;
+@use "../global";
+
+// HERO START
+
+#hero {
+    padding: 180px 20px 237px;
+    background-color: var.$qizil-color;
+}
+
+.hero__left {
+    padding-bottom: 100px;
+    h4 {
+        color: #FFF;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-family: ubuntu-regular;
+        font-size: 23px;
+        font-weight: 500;
+        line-height: 130%;
+        letter-spacing: 0.92px;
+        text-transform: capitalize;
+        margin-bottom: 25px;
+    }
+    h1 {
+        max-width: 555px;
+        color: #FFF;
+        font-family: ubuntu-regular;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 130%;
+        letter-spacing: 3.6px;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+        @media (min-width: 700px) {
+            font-size: 90px;
+        }
+    }
+    p {
+        max-width: 453px;
+        color: #FFF;
+        font-family: ubuntu-regular;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 175%;
+        letter-spacing: 0.64px;
+        margin-bottom: 40px;
+    }
+    a {
+        color: #FFF;
+        font-family: ubuntu-regular;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 175%;
+        letter-spacing: 0.64px;
+        padding: 8px 32px;
+        border: 1px solid white;
+        border-radius: 100px;
+        transition: 0.5s;
+    }
+    a:hover {
+        background-color: #fff;
+        color: var.$qizil-color;
+    }
+
+}
+
+.hero__right img {
+    width: 100%;
+}
+
+
+// HERO END
+
+// DISHES START
+
+#dishes {
+    background-color: #F8F8F8;
+    padding: 120px 0;
+}
+
+.dishes__header {
+    h3 {
+        color: var(--qizil, #BB2339);
+        font-variant-numeric: lining-nums tabular-nums;
+        font-family: ubuntu-regular;
+        font-size: 48px;
+        font-weight: 500;
+        letter-spacing: 1.44px;
+        text-transform: capitalize;
+        text-align: center;
+        margin-bottom: 80px;
+        @media (min-width: 700px) {
+            text-align: start;
+        }
+    }
+}
+
+.carousel__card {
+    max-width: 310px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 20px 40px 20px;
+    border-radius: 14px;
+    background-color: #fff;
+    h5 {
+        color: #242424;
+        text-align: center;
+        font-family: ubuntu-regular;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    .stars {
+        max-width: 108px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+    p {
+        color: var(--qizil, #BB2339);
+        text-align: center;
+        font-family: ubuntu-regular;
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
+
+
+#owl-carousel .owl-next,
+#owl-carousel .owl-prev {
+    position: absolute;
+    top: -70px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #646464;
+    text-align: center;
+}
+
+#owl-carousel .owl-next {
+    right: 0;
+}
+
+#owl-carousel .owl-prev {
+    right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.owl-prev img {
+    width: 25px;
+    margin-left: auto;
+}
+
+// DISHES END
+
+// PACK START
+
+#pack {
+    padding: 120px 0;
+}
+
+.pack__title {
+    color: var(--qizil, #BB2339);
+    font-variant-numeric: lining-nums tabular-nums;
+    font-family: ubuntu-regular;
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: 1.44px;
+    text-transform: capitalize;
+    margin-bottom: 60px;
+}
+
+.ap-tab-list {
+    display: grid;
+    grid-template-columns: 250px;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    @media (min-width: 700px) {
+        grid-template-columns: 250px 250px;
+    }
+    @media (min-width: 900px) {
+        grid-template-columns: 250px 250px 250px;
+    }
+    @media (min-width: 1100px) {
+        grid-template-columns: 250px 250px 250px 250px;
+    }
+    @media (min-width: 1400px) {
+        grid-template-columns: repeat(8, auto);
+    }
+}
+
+.ap-tab-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ap-tab-link:hover {
+    background-color: #BB2339;
+    color: white;
+    border-radius: 100px;
+}
+
+.ap-tab-link {
+    display: inline-block;
+    color: #242424;
+    font-family: ubuntu-regular;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 175%;
+    letter-spacing: 0.8px;
+    text-transform: capitalize;
+    border: 1px solid #BB2339;
+    padding: 10px 26.99px;
+    border-radius: 100px;
+}
+
+.tap__card {
+    max-width: 310px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 20px 40px 20px;
+    border-radius: 14px;
+    background-color: #fff;
+    border: 1px solid rgba(36, 36, 36, 0.10);
+    margin-bottom: 20px;
+    img {
+        width: 100%;
+    }
+    h5 {
+        color: #242424;
+        text-align: center;
+        font-family: ubuntu-regular;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .stars {
+        max-width: 108px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: var(--qizil, #BB2339);
+        text-align: center;
+        font-family: ubuntu-regular;
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
+
+// PACK END
+
+// CUSTOMER START
+
+#customer {
+    background-color: #F4F4F4;
+}
+
+.customer {
+    padding: 100px 20px;
+    &__header {
+        text-align: center;
+        margin-bottom: 60px;
+        h6 {
+            color: #242424;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: ubuntu-regular;
+            font-size: 23px;
+            font-weight: 700;
+            line-height: 130%;
+            letter-spacing: 0.92px;
+            text-transform: capitalize;
+        }
+        img {
+            width: 50px;
+        }
+        h3 {
+            color: #242424;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: ubuntu-regular;
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 130%;
+            letter-spacing: 1.44px;
+            text-transform: capitalize;
+        }
+    }
+}
+
+.carousel__card--2 {
+    max-width: 410px;
+    padding: 30px 50px 31px 20px;
+    background-color: #fff;
+
+    h5 {
+        color: #333;
+        font-family: ubuntu-regular;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 26px;
+    }
+
+    p {
+        max-width: 340px;
+        color: #333;
+        font-family: ubuntu-regular;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+}
+
+.carosel__bottom {
+    display: flex;
+    .calendar img,
+    .time img,
+    .eyes img {
+        width: 20px;
+        margin-top: -20px;
+    }
+    .calendar,
+    .time,
+    .eyes  {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        gap: 10px;
+    }
+    p {
+        color: #333;
+        font-family: ubuntu-regular;
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
+
+// CUSTOMER END
+
+// NEWS START
+
+.news {
+    padding: 120px 20px;
+    &__header {
+        text-align: center;
+        h6 {
+            color: #242424;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: ubuntu-regular;
+            font-size: 23px;
+            font-weight: 700;
+            line-height: 130%;
+            letter-spacing: 0.92px;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+        }
+        img {
+            width: 50px;
+        }
+        h3 {
+            color: var(--qizil, #BB2339);
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: ubuntu-regular;
+            font-size: 48px;
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: 1.44px;
+            text-transform: capitalize;
+            margin-bottom: 60px;
+        }
+    }
+    &__card {
+        max-width: 410px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-bottom: 30px;
+        border: 1px solid rgba(36, 36, 36, 0.10);
+        border-radius: 14px;
+        margin-bottom: 30px;
+        img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        h4 {
+            max-width: 332px;
+            color: #242424;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: ubuntu-regular;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 32px;
+            text-transform: capitalize;
+            padding-left: 20px;
+        }
+        p {
+            max-width: 361px;
+            color: var(--AAAAAA, #AAA);
+            font-family: ubuntu-regular;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            padding-left: 20px;
+        }
+        &__bottom {
+            display: flex;
+            padding-left: 20px;
+            justify-content: space-between;
+            a {
+                color: var(--qizil, #BB2339);
+                font-family: ubuntu-regular;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 0.64px;
+            }
+            p {
+                padding-right: 20px;
+            }
+        }
+    }
+}
+
+.news-link {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.news__bottom-likn {
+    color: #242424;
+    font-family: Cera Round Pro;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 175%;
+    letter-spacing: 0.64px;
+    padding: 12px 32px;
+    border: 1px solid #BB2339;
+    border-radius: 100px;
+}
+
+
+
+// NEWS END 
+
+@media (min-width: 700px) {
+    .tab__row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .tab__row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .news__row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1000px) {
+    .hero {
+        display: flex;
+    }
+    .hero__right img {
+        width: 724px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .tab__row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .news__row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 35px;
+    }
+}
