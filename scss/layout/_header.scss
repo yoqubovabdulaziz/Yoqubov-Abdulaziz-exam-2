@@ -1,7 +1,49 @@
 @use "../layout/container";
 @use "../utils/variables" as var;
 
-#navigator {
+.navigator {
     background-color: var.$qizil-color;
     height: 100px;
+    transition: 0.5s;
 }
+
+.dark .navigator {
+    background-color: black;
+    box-shadow: 0 0 20px 1px var.$white-color;
+}
+
+.dark #navbar.navbar-shrink {
+    box-shadow: 0 0 20px 1px var.$white-color;
+}
+
+#navbar.navbar-shrink {
+    height: 70px;
+    box-shadow: 5px 10px 35px 1px var.$qizil-color;
+}
+
+#nav__login {
+    display: inline-block;
+    padding: 10px 40px;
+    border: 1px solid var.$white-color;
+    border-radius: 100px;
+}
+
+#nav__list {
+    display: flex;
+    align-items: center;
+}
+
+#nav__login:hover {
+    background-color: var.$white-color;
+    color: var.$qizil-color;
+}
+
+.nav-link {
+    transition: 0.5s;
+}
+
+.nav-link:hover {
+    transform: scale(1.2);
+}
+
+

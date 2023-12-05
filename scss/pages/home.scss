@@ -4,8 +4,20 @@
 // HERO START
 
 #hero {
+    position: relative;
     padding: 180px 20px 237px;
     background-color: var.$qizil-color;
+    transition: 0.5s;
+}
+
+.dark #hero {
+    background-color: black;
+}
+
+.scroll {
+    position: absolute;
+    right: 100px;
+    bottom: 54px;
 }
 
 .hero__left {
@@ -76,11 +88,24 @@
 #dishes {
     background-color: #F8F8F8;
     padding: 120px 0;
+    transition: 0.5s;
+}
+
+.dark #dishes {
+    background-color: black;
+}
+
+.dark .carousel__card {
+    background-color: #333;
+}
+
+.dark .carousel__card * {
+    color: var.$white-color;
 }
 
 .dishes__header {
     h3 {
-        color: var(--qizil, #BB2339);
+        color: var.$qizil-color;
         font-variant-numeric: lining-nums tabular-nums;
         font-family: ubuntu-regular;
         font-size: 48px;
@@ -101,9 +126,10 @@
     margin-right: auto;
     padding: 20px 20px 40px 20px;
     border-radius: 14px;
-    background-color: #fff;
+    background-color: var.$white-color;
+    transition: 0.5s;
     h5 {
-        color: #242424;
+        color: var.$text-color;
         text-align: center;
         font-family: ubuntu-regular;
         font-size: 18px;
@@ -117,7 +143,7 @@
         margin-bottom: 20px;
     }
     p {
-        color: var(--qizil, #BB2339);
+        color: var.$qizil-color;
         text-align: center;
         font-family: ubuntu-regular;
         font-size: 24px;
@@ -157,11 +183,36 @@ button.owl-prev img {
 // PACK START
 
 #pack {
+    position: relative;
     padding: 120px 0;
+    transition: 0.5s;
+}
+
+.dark #pack {
+    background-color: black;
+}
+
+.dark #pack * {
+    color: white;
+}
+
+.dark .tap__card {
+    background-color: #333;
+}
+
+.dark .tap__card:hover {
+    box-shadow: 0px 1px 20px 1px;
+}
+
+.two__spoons {
+    position: absolute;
+    top: -50px;
+    right: 100px;
+
 }
 
 .pack__title {
-    color: var(--qizil, #BB2339);
+    color: var.$qizil-color;
     font-variant-numeric: lining-nums tabular-nums;
     font-family: ubuntu-regular;
     font-size: 48px;
@@ -198,23 +249,24 @@ button.owl-prev img {
 }
 
 .ap-tab-link:hover {
-    background-color: #BB2339;
+    background-color: var.$qizil-color;
     color: white;
     border-radius: 100px;
 }
 
 .ap-tab-link {
     display: inline-block;
-    color: #242424;
+    color: var.$text-color;
     font-family: ubuntu-regular;
     font-size: 16px;
     font-weight: 600;
     line-height: 175%;
     letter-spacing: 0.8px;
     text-transform: capitalize;
-    border: 1px solid #BB2339;
+    border: 1px solid var.$qizil-color;
     padding: 10px 26.99px;
     border-radius: 100px;
+    transition: 0.5s;
 }
 
 .tap__card {
@@ -226,11 +278,12 @@ button.owl-prev img {
     background-color: #fff;
     border: 1px solid rgba(36, 36, 36, 0.10);
     margin-bottom: 20px;
+    transition: 0.5s;
     img {
         width: 100%;
     }
     h5 {
-        color: #242424;
+        color: var.$text-color;
         text-align: center;
         font-family: ubuntu-regular;
         font-size: 18px;
@@ -246,7 +299,7 @@ button.owl-prev img {
     }
 
     p {
-        color: var(--qizil, #BB2339);
+        color: var.$qizil-color;
         text-align: center;
         font-family: ubuntu-regular;
         font-size: 24px;
@@ -254,12 +307,37 @@ button.owl-prev img {
     }
 }
 
+.tap__card:hover {
+    transform: scale(1.02);
+    box-shadow: 10px 20px 50px 1px rgba(36, 36, 36, 0.10);
+}
+
 // PACK END
 
 // CUSTOMER START
 
 #customer {
+    position: relative;
     background-color: #F4F4F4;
+    transition: 0.5s;
+}
+
+.dark #customer {
+    background-color: black;
+}
+
+.dark #customer * {
+    color: var.$white-color;
+}
+
+.dark .carousel__card--2 {
+    background-color: #333;
+}
+
+.two__spoons-2 {
+    position: absolute;
+    bottom: -50px;
+    right: 100px;
 }
 
 .customer {
@@ -268,7 +346,7 @@ button.owl-prev img {
         text-align: center;
         margin-bottom: 60px;
         h6 {
-            color: #242424;
+            color: var.$text-color;
             font-variant-numeric: lining-nums tabular-nums;
             font-family: ubuntu-regular;
             font-size: 23px;
@@ -281,7 +359,7 @@ button.owl-prev img {
             width: 50px;
         }
         h3 {
-            color: #242424;
+            color: var.$text-color;
             font-variant-numeric: lining-nums tabular-nums;
             font-family: ubuntu-regular;
             font-size: 48px;
@@ -296,7 +374,8 @@ button.owl-prev img {
 .carousel__card--2 {
     max-width: 410px;
     padding: 30px 50px 31px 20px;
-    background-color: #fff;
+    background-color: var.$white-color;
+    transition: 0.5s;
 
     h5 {
         color: #333;
@@ -345,12 +424,25 @@ button.owl-prev img {
 
 // NEWS START
 
+.dark #news {
+    background-color: black;
+}
+
+.dark #news * {
+    color: var.$white-color;
+}
+
+.dark .news__card {
+    background-color: #333;
+    box-shadow: 0px 0px 20px 1px;
+}
+
 .news {
     padding: 120px 20px;
     &__header {
         text-align: center;
         h6 {
-            color: #242424;
+            color: var.$text-color;
             font-variant-numeric: lining-nums tabular-nums;
             font-family: ubuntu-regular;
             font-size: 23px;
@@ -364,7 +456,7 @@ button.owl-prev img {
             width: 50px;
         }
         h3 {
-            color: var(--qizil, #BB2339);
+            color: var.$qizil-color;
             font-variant-numeric: lining-nums tabular-nums;
             font-family: ubuntu-regular;
             font-size: 48px;
@@ -389,7 +481,7 @@ button.owl-prev img {
         }
         h4 {
             max-width: 332px;
-            color: #242424;
+            color: var.$text-color;
             font-variant-numeric: lining-nums tabular-nums;
             font-family: ubuntu-regular;
             font-size: 24px;
@@ -412,7 +504,7 @@ button.owl-prev img {
             padding-left: 20px;
             justify-content: space-between;
             a {
-                color: var(--qizil, #BB2339);
+                color: var.$qizil-color;
                 font-family: ubuntu-regular;
                 font-size: 16px;
                 font-weight: 700;
@@ -431,21 +523,76 @@ button.owl-prev img {
 }
 
 .news__bottom-likn {
-    color: #242424;
-    font-family: Cera Round Pro;
+    color: var.$text-color;
+    font-family: ubuntu-regular;
     font-size: 16px;
     font-weight: 700;
     line-height: 175%;
     letter-spacing: 0.64px;
     padding: 12px 32px;
-    border: 1px solid #BB2339;
+    border: 1px solid var.$qizil-color;
     border-radius: 100px;
+    transition: 0.5s;
 }
 
-
+.news__bottom-likn:hover {
+    color: var.$white-color;
+    background-color: var.$qizil-color;
+}
 
 // NEWS END 
 
+// ROOM START
+
+.room {
+    position: relative;
+}
+
+#room {
+    position: relative;
+}
+
+.two__spoons-3 {
+    position: absolute;
+    left: 200px;
+    top: 77px;
+    z-index: 10;
+}
+
+.room__img {
+    width: 100%;
+}
+
+.room__btn {
+    position: absolute;
+    top: 40%;
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    background-color: transparent;
+   
+    img {
+   width: 100%;
+    }
+}
+
+
+.modal-content {
+    width: 120%;
+    position: absolute;
+    top: 150px;
+    left: -20px;
+}
+
+// ROOM END
+
+// GALERY START
+
+
+
+
+// GALERY END
 @media (min-width: 700px) {
     .tab__row {
         display: grid;
@@ -483,5 +630,9 @@ button.owl-prev img {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 35px;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 }

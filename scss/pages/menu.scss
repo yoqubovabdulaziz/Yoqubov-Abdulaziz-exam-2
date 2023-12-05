@@ -1,1 +1,169 @@
 @use "../global";
+@use "../utils/variables" as var;
+
+// HERO START
+
+#hero {
+    padding: 200px 0;
+    position: relative;
+    transition: 0.5s;
+}
+
+.dark #hero {
+    background-color: black;
+}
+
+.dark #hero * {
+    color: var.$white-color;
+}
+
+.dark .tab__link__card {
+    background-color: #333;
+}
+
+.dark .ap-tab-link:hover {
+    background-color: var.$qizil-color;
+}
+
+.dark .tap__card {
+    background-color: #333;
+}
+
+.dark .tap__card:hover {
+    box-shadow: 0 0 20px 1px white;
+}
+
+.two__spoons {
+    position: absolute;
+    top: 1500px;
+    left: 700px;
+}
+
+.bread {
+    display: flex;
+    gap: 20px;
+    a {
+        color: var.$text-color;
+    }
+    li {
+        font-variant-numeric: lining-nums tabular-nums;
+        font-family: ubuntu-regular;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.42px;
+        text-transform: capitalize;
+    }
+    &__link a {
+        color: var.$qizil-color;
+    }
+}
+
+
+.tab__link__card {
+    max-width: 428px;
+    background-color: var.$qizil-color;
+    padding: 50px 40px 54px 40px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    h1 {
+        color: var.$white-color;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-family: ubuntu-regular;
+        font-size: 40px;
+        font-weight: 500;
+        text-transform: capitalize;
+        margin-bottom: 40px;
+        padding-left: 30px;
+    }
+}
+
+.ap-tab-list {
+    display: grid;
+    grid-template-columns: 250px;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.ap-tab-item {
+    display: flex;
+}
+
+.ap-tab-link {
+    display: inline-block;
+    color: var.$white-color;
+    font-family: ubuntu-regular;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 175%;
+    letter-spacing: 0.8px;
+    text-transform: capitalize;
+    border: 1px solid var.$white-color;
+    padding: 10px 26.99px;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+.ap-tab-link:hover {
+    background-color: var.$white-color;
+    color: var.$text-color;
+}
+
+.tap__card {
+    max-width: 310px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 20px 40px 20px;
+    border-radius: 14px;
+    background-color: #fff;
+    border: 1px solid rgba(36, 36, 36, 0.10);
+    margin-bottom: 20px;
+    transition: 0.5s;
+
+    img {
+        width: 100%;
+    }
+
+    h5 {
+        color: var.$text-color;
+        text-align: center;
+        font-family: ubuntu-regular;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .stars {
+        max-width: 108px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: var.$qizil-color;
+        text-align: center;
+        font-family: ubuntu-regular;
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
+
+.tap__card:hover {
+    transform: scale(1.02);
+    box-shadow: 10px 20px 50px 1px rgba(36, 36, 36, 0.10);
+}
+
+@media (min-width: 700px) {
+    .tab__row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1000px) {
+    .left__right {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}

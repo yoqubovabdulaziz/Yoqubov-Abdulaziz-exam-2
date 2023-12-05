@@ -17,12 +17,26 @@
     <link rel="stylesheet" href="css/home.min.css">
 </head>
 <body>
+    <div id="loading">
+        <div class="loadingio-spinner-ripple-92mwbr9tn7p">
+            <div class="ldio-qk9sibaufb">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <a id="backtop" href="#">
+        <i class="fa-solid fa-circle-chevron-up fa-bounce"></i>
+    </a>
     <header>
-        <nav id="navigator" class="navbar-expand-md navbar navbar-dark fixed-top">
+        <nav id="navbar" class="navigator navbar-expand-md navbar navbar-dark fixed-top">
             <div class="container-xl">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="./index.html">
                     <img src="assets/images/nav-logo.svg" alt="eaturkish">
                 </a>
+                <button id="mode-btn">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
                     aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -35,21 +49,21 @@
                             aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 gap-5">
+                        <ul id="nav__list" class="navbar-nav justify-content-end flex-grow-1 pe-3 gap-5">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Menu</a>
+                                <a class="nav-link" aria-current="page" href="pages/menu.html">Menu</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="pages/about.html">News</a>
+                                <a class="nav-link" href="pages/news.html">News</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="pages/pricing.html">About Us</a>
+                                <a class="nav-link" href="pages/about.html">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="pages/work.html">Contact Us</a>
+                                <a class="nav-link" href="pages/contact.html">Contact Us</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="pages/blog.html">Log in</a>
+                            <li class="nav-item ">
+                                <a id="nav__login" class="nav-link" href="#">Log in</a>
                             </li>
                         </ul>
                     </div>
@@ -59,6 +73,7 @@
     </header>
     <main>
         <section id="hero">
+            <img class="scroll" src="assets/images/scroll.svg" alt="">
             <div class="container__1340 hero">
                 <div class="hero__left">
                     <h4>Chase the new Flavour</h4>
@@ -178,6 +193,7 @@
             </div>
         </section>
         <section id="pack">
+            <img class="two__spoons" src="assets/images/two-spoons.svg" alt="">
             <div class="container__1340 pack">
                 <h3 class="pack__title">Our Regular Menu Pack</h3>
                 <div class="ap-tab">
@@ -454,6 +470,7 @@
             </div>
         </section>
         <section id="customer">
+            <img src="assets/images/two-spoons.svg" alt="" class="two__spoons-2">
             <div class="container__1340 customer">
                 <div class="customer__header">
                     <h6>Testimony</h6>
@@ -497,7 +514,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mus
                         in.</p>
                         <div class="news__card__bottom">
-                            <a href="#">Read More</a>
+                            <a href="pages/news.html">Read More</a>
                             <p>16 Apr 2021</p>
                         </div>
                     </div>
@@ -508,7 +525,7 @@
                             egestas mus
                             in.</p>
                         <div class="news__card__bottom">
-                            <a href="#">Read More</a>
+                            <a href="pages/news.html">Read More</a>
                             <p>16 Apr 2021</p>
                         </div>
                     </div>
@@ -519,17 +536,98 @@
                             egestas mus
                             in.</p>
                         <div class="news__card__bottom">
-                            <a href="#">Read More</a>
+                            <a href="pages/news.html">Read More</a>
                             <p>16 Apr 2021</p>
                         </div>
                     </div>
                 </div>
                 <div class="news-link">
-                    <a class="news__bottom-likn" href="#">View More</a>
+                    <a class="news__bottom-likn" href="pages/news.html">View More</a>
+                </div>
+            </div>
+        </section>
+        <section id="room">
+            <img class="two__spoons-3" src="assets/images/two-spoons.svg" alt="">
+            <div class="container__1920 room">
+                <img class="room__img" src="assets/images/home-room.png" alt="">
+                <!-- Button trigger modal -->
+                <button type="button" class="room__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img src="assets/images/Play.svg" alt="">
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/ADRYHfUwcTo?si=5PmHBjlBirjkri20"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+    <footer id="footer">
+        <div class="container__1340 footer">
+            <div class="subscribe">
+                <h6>Newsletter</h6>
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>And never miss latest Updates!</p>
+                <form>
+                    <div class="forms">
+                        <input type="email" required name="email" placeholder="Email Address">
+                        <button class="subscribe__btn">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+            <div class="footer__row">
+                <div class="footer__start">
+                    <h3>Contact Us</h3>
+                    <p>9 W 53rd St, London, NY 10019, UK</p>
+                    <h6>+1 212-344-1230</h6>
+                    <h6>+1 212-344-1230</h6>
+                </div>
+                <div class="footer__center">
+                    <img src="assets/images/footer-logo.svg" alt="eaturkish">
+                    <p>"The best way to find yourself is to lose yourself in the service of others.”</p>
+                    <div class="brands">
+                        <a href="#">
+                            <img src="assets/images/facebook.svg" alt="facebook">
+                        </a>
+                        <a href="#">
+                            <img src="assets/images/twitter.svg" alt="twitter">
+                        </a>
+                        <a href="#">
+                            <img src="assets/images/instagram.svg" alt="instagram">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__end">
+                    <h3>Working Hours</h3>
+                    <div class="footer__date">
+                        <h6>Monday-Friday:</h6>
+                        <p>08:00 am -12:00 am</p>
+                    </div>
+                    <div class="footer__date">
+                        <h6>Saturday-Sunday:</h6>
+                        <p>07:00am -11:00 pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>

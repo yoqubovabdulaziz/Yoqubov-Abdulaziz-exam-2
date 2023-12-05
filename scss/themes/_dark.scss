@@ -1,0 +1,21 @@
+#mode-btn {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: black;
+    i {
+        font-size: 30px;
+        color: white;
+    }
+}
+
+.dark #mode-btn {
+    background-color: white;
+    i {
+        color: black;
+    }
+}

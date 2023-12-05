@@ -1,0 +1,220 @@
+@use "../utils/variables" as var;
+@use "../themes/dark";
+
+#footer {
+    padding: 0 20px 148px;
+    background-color: var.$qizil-color;
+}
+
+.dark #footer {
+    background-color: #111;
+}
+
+.dark .subscribe {
+    background-color: #333;
+}
+
+.footer__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media (min-width: 700px) {
+        flex-direction: row;
+        gap: 100px;
+    }
+}
+
+.footer__start {
+    margin-bottom: 50px;
+    h3 {
+        color: var.$white-color;
+        text-align: center;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-family: ubuntu-regular;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 130%;
+        letter-spacing: 1.28px;
+        text-transform: capitalize;
+    }
+    p {
+        text-align: center;
+        color: var.$white-color;
+        font-family: ubuntu-regular;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0.64px;
+    }
+    h6 {
+        text-align: center;
+        color: var.$white-color;
+        font-family: ubuntu-regular;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0.64px;
+    }
+}
+
+.footer__center {
+    text-align: center;
+    img {
+        margin-bottom: 30px;
+    }
+    p {
+        max-width: 438px;
+        color: var.$white-color;
+        text-align: center;
+        font-family: ubuntu-regular;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0.64px;
+    }
+    .brands {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+}
+
+.footer__end {
+    h3 {
+        text-align: center;
+        color: var.$white-color;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-family: ubuntu-regular;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 130%;
+        letter-spacing: 1.28px;
+        text-transform: capitalize;
+    }
+    h6 {
+        color: var.$white-color;
+        text-align: center;
+        font-family: ubuntu-regular;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0.64px;
+    }
+    p {
+        color: var.$white-color;
+        text-align: center;
+        font-family: ubuntu-regular;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0.64px;
+    }
+}
+
+
+// SUBSCRIBE START
+
+.footer {
+    position: relative;
+}
+
+.subscribe {
+    max-width: 1406px;
+    transform: translateY(-130px);
+    padding: 64px 0;
+    border-radius: 20px;
+    background-color: var.$qizil-color;
+    box-shadow: 22px 30px 95px 1px rgba(86, 86, 86, 0.20);
+    h6 {
+        text-align: center;
+        color: var.$white-color;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-family: ubuntu-regular;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 130%;
+        letter-spacing: 0.92px;
+        text-transform: capitalize;
+        margin-bottom: 8px;
+    }
+    h3 {
+        max-width: 902px;
+        margin-right: auto;
+        margin-left: auto;
+        color: var.$white-color;
+        text-align: center;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-family: ubuntu-regular;
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 130%;
+        letter-spacing: 1.44px;
+        text-transform: capitalize;
+        margin-bottom: 24px;
+    }
+    p {
+        color: var.$white-color;
+        text-align: center;
+        font-family: ubuntu-regular;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 175%;
+        letter-spacing: 0.64px;
+        margin-bottom: 64px;
+    }
+    .forms {
+        display: flex;
+        flex-direction: column;
+        max-width: 635px;
+        input {
+            width: 100%;
+            color: var(--AAAAAA, #AAA);
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: ubuntu-regular;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 175%;
+            letter-spacing: 0.64px;
+            text-transform: capitalize;
+            border: 1px solid var.$white-color;
+            margin-bottom: 20px;
+            border-radius: 100px;
+            background-color: transparent;
+            padding: 12px 0 12px 20px;
+        }
+    }
+    .subscribe__btn {
+        color: var.$white-color;
+        font-family: ubuntu-regular;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 175%;
+        letter-spacing: 0.64px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 12px 32px;
+        border-radius: 100px;
+        border: 1px solid var.$white-color;
+        background-color: transparent;
+        transition: 0.5s;
+    }
+    .subscribe__btn:hover {
+        background-color: var.$white-color;
+        color: var.$qizil-color;
+        opacity: .9;
+    }
+}
+
+@media (min-width: 900px) {
+    .forms {
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+    .subscribe__btn {
+        position: absolute;
+        right: -150px;
+    }
+}

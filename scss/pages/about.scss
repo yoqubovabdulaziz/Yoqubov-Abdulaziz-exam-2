@@ -1,1 +1,71 @@
 @use "../global";
+@use "../utils/variables" as var;
+
+.about {
+    padding: 140px 20px 240px;
+}
+
+#about {
+    position: relative;
+    transition: 0.5s;
+}
+
+.dark #about {
+    background-color: black;
+}
+
+.dark #about * {
+    color: var.$white-color;
+}
+
+.two__spoons {
+    position: absolute;
+    bottom: 200px;
+    right: 200px;
+}
+
+.bread {
+    display: flex;
+    gap: 20px;
+
+    a {
+        color: var.$text-color;
+    }
+
+    li {
+        font-variant-numeric: lining-nums tabular-nums;
+        font-family: ubuntu-regular;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.42px;
+        text-transform: capitalize;
+    }
+
+    &__link a {
+        color: var.$qizil-color;
+    }
+}
+
+.about__header {
+    text-align: center;
+    margin-bottom: 30px;
+    &__title {
+        color: var.$text-color;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-family: ubuntu-regular;
+        font-size: 64px;
+        font-weight: 500;
+        line-height: 130%;
+        letter-spacing: 1.92px;
+        text-transform: capitalize;
+    }
+}
+
+.p2 {
+    margin-bottom: 30px;
+}
+
+.about__img {
+    margin-bottom: 30px;
+    width: 100%;
+}

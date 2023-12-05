@@ -1,1 +1,152 @@
 @use "../global";
+@use "../utils/variables" as var;
+
+#news {
+    padding: 150px 20px 230px;
+    transition: 0.5s;
+}
+
+.dark #news {
+    background-color: black;
+}
+
+.dark #news * {
+    color: var.$white-color;
+}
+
+.dark .news__card {
+    background-color: #333;
+    box-shadow: 0 0 20px 1px;
+}
+
+.bread {
+    display: flex;
+    gap: 20px;
+
+    a {
+        color: var.$text-color;
+    }
+
+    li {
+        font-variant-numeric: lining-nums tabular-nums;
+        font-family: ubuntu-regular;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.42px;
+        text-transform: capitalize;
+    }
+
+    &__link a {
+        color: var.$qizil-color;
+    }
+}
+
+.news__header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.news__title {
+    text-align: center;
+    color: var.$text-color;
+    font-variant-numeric: lining-nums tabular-nums;
+    font-family: ubuntu-regular;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 1.92px;
+    text-transform: capitalize;
+}
+
+.news-link {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.news__bottom-likn {
+    color: var.$text-color;
+    font-family: ubuntu-regular;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 175%;
+    letter-spacing: 0.64px;
+    padding: 12px 32px;
+    border: 1px solid var.$qizil-color;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+.news__bottom-likn:hover {
+    color: var.$white-color;
+    background-color: var.$qizil-color;
+}
+
+.news__card {
+    max-width: 410px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 30px;
+    border: 1px solid rgba(36, 36, 36, 0.10);
+    border-radius: 14px;
+    margin-bottom: 30px;
+
+    img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    h4 {
+        max-width: 332px;
+        color: var.$text-color;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-family: ubuntu-regular;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px;
+        text-transform: capitalize;
+        padding-left: 20px;
+    }
+
+    p {
+        max-width: 361px;
+        color: var(--AAAAAA, #AAA);
+        font-family: ubuntu-regular;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        padding-left: 20px;
+    }
+
+    &__bottom {
+        display: flex;
+        padding-left: 20px;
+        justify-content: space-between;
+
+        a {
+            color: var.$qizil-color;
+            font-family: ubuntu-regular;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.64px;
+        }
+
+        p {
+            padding-right: 20px;
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    .news__row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .news__row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 35px;
+    }
+}
