@@ -50,6 +50,7 @@ $(document).ready(function(){
   });
 });
 
+
 // NAVBAR SHRINK
 
 window.addEventListener("scroll", function () {
@@ -73,9 +74,9 @@ let modeBtn = document.getElementById("mode-btn");
 
 modeBtn.addEventListener("click", function () {
   if (document.body.className != "dark") {
-    this.firstElementChild.src = "images/light.svg";
+    this.firstElementChild.src = "./assets/images/light.svg";
   } else {
-    this.firstElementChild.src = "images/dark.svg";
+    this.firstElementChild.src = "./assets/images/dark.svg";
   }
   document.body.classList.toggle("dark");
 });

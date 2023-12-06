@@ -557,6 +557,9 @@ button.owl-prev img {
     left: 200px;
     top: 77px;
     z-index: 10;
+    @media (max-width: 800px) {
+        display: none;
+    }
 }
 
 .room__img {
@@ -566,14 +569,18 @@ button.owl-prev img {
 .room__btn {
     position: absolute;
     top: 40%;
-    left: calc(50% - 50px);
+    left: calc(50% - 20px);
     width: 100px;
     height: 100px;
     padding: 0;
     background-color: transparent;
-   
+    @media (max-width: 500px) {
+        top: 30%;
+        width: 50px;
+        height: 50px;
+    }
     img {
-   width: 100%;
+        width: 100%;
     }
 }
 
@@ -583,16 +590,121 @@ button.owl-prev img {
     position: absolute;
     top: 150px;
     left: -20px;
+    @media (max-width: 500px) {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .modal-body iframe {
+        width: 300px;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 // ROOM END
 
 // GALERY START
 
+#galery {
+    background-color: #F8F8F8;
+    padding: 130px 20px 200px;
+}
 
+.dark #galery {
+    background-color: black;
+}
+
+.dark #galery * {
+    color: var.$white-color;
+}
+
+.galery {
+    &__left {
+        padding-bottom: 30px;
+        h1 {
+            color: var.$text-color;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: ubuntu-regular;
+            font-size: 23px;
+            font-weight: 700;
+            line-height: 130%;
+            letter-spacing: 0.92px;
+            text-transform: capitalize;
+        }
+        h2 {
+            color: var.$text-color;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: ubuntu-regular;
+            font-size: 48px;
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: 1.44px;
+            text-transform: capitalize;
+            margin-bottom: 32px;
+        }
+        a {
+            color: var.$text-color;
+            font-family: ubuntu-regular;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 175%;
+            letter-spacing: 0.64px;
+            padding: 8px 32px;
+            border: 1px solid var.$qizil-color;
+            border-radius: 100px;
+            transition: 0.5s;
+        }
+    }
+}
+
+.galery__left a:hover {
+    background-color: var.$qizil-color;
+    color: white;
+}
+
+.item-2 {
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+.item-2 img {
+    width: 100%;
+    height: 100%;
+    padding-right: 210px;
+}
+
+#galery .owl-nav {
+    display: none;
+}
+
+.insta__hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(34, 34, 36, 0.8);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.insta__hover img {
+    width: 10px;
+    height: 50px;
+}
+
+.insta__hover:hover {
+    opacity: 1;
+}
 
 
 // GALERY END
+
 @media (min-width: 700px) {
     .tab__row {
         display: grid;
@@ -621,6 +733,22 @@ button.owl-prev img {
     }
 }
 
+@media (min-width: 1100px) {
+    .galery {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .galery__left {
+        width: 40%;
+    }
+
+    .galery__right {
+        width: 60%;
+    }
+}
+
 @media (min-width: 1200px) {
     .tab__row {
         display: grid;
@@ -630,9 +758,5 @@ button.owl-prev img {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 35px;
-    }
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
     }
 }
